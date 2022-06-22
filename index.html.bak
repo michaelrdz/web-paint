@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebPaint</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <section id="Cuerpo">
+        <div id="floatingFooter">
+            <h3>Michael Rodríguez (<a href="https://twitter.com/Michaelrdz_me" target="_blank">@Michaelrdz.me</a>)<br>
+            - 2022 -
+            </h3>
+            <hr/>
+        </div>
+        <div id="cont_general">
+            <div class="cont-space" id="cont_controllers">
+                <h3>WEB PAINT</h3>
+                <fieldset>
+                    <legend>Controllers</legend>
+                    <label for="form_size">Brush size:</label><br>
+                    <input id="form_size" name="form_size" type="range" min="1" max="6" value="3" onchange="changeBrushSize(this.value);">
+                    <br>
+                    <label for="form_color">Paint color:</label><br>
+                    <input id="form_color" name="form_color" type="color" onchange="cahngePaintColor(this.value);">
+                    <br>
+                    <button onclick="saveCanvas();">SAVE</button>
+                    <button onclick="clearCanvas();">CLEAR</button>
+                </fieldset>
+            </div>
+            <div class="cont-space" id="cont_canvas">
+                <canvas id="canvasArea" width="1280" height="700"></canvas>
+            </div>
+        </div>
+    </section>
+    <script src="scripts.js"></script>
+</body>
+</html>
